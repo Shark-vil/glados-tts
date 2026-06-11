@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  glados-tts:
+    build: .
+    container_name: glados-tts
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8016:8000"
+    command: python glados_api.py
